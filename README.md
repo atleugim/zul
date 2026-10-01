@@ -20,11 +20,23 @@ macOS 14 or later.
 
 ## Installation
 
+Zul isn't notarized by Apple, so macOS blocks a downloaded copy the first time it opens.
+
+### Homebrew
+
+```sh
+brew install --cask atleugim/tap/zul
+```
+
+The cask removes the quarantine flag after installing, which skips that Gatekeeper check.
+
+### Manual
+
 1. Download `Zul-<version>.dmg` from the [latest release](https://github.com/atleugim/zul/releases/latest).
 2. Open it and drag **Zul** to **Applications**.
 3. Open Zul from Applications.
 
-Zul isn't notarized by Apple, so macOS blocks it the first time:
+To get past the block on first launch:
 
 1. When macOS says it can't verify Zul, click **Done**.
 2. Open **System Settings > Privacy & Security** and scroll down to **Security**.
