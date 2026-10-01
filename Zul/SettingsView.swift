@@ -27,6 +27,15 @@ struct SettingsView: View {
   private let fontFamilies = NSFontManager.shared.availableFontFamilies
   // Read from the system rather than stored: it can also be turned off in System Settings.
   @State private var launchAtLogin = SMAppService.mainApp.status == .enabled
+  @State private var updateStatus = UpdateStatus.idle
+
+  private enum UpdateStatus: Equatable {
+    case idle
+    case checking
+    case upToDate
+    case available(version: String, page: URL)
+    case failed
+  }
 
   var body: some View {
     Form {
@@ -37,6 +46,20 @@ struct SettingsView: View {
             // Reflects what actually happened if registration failed or needs approval.
             launchAtLogin = SMAppService.mainApp.status == .enabled
           }
+        LabeledContent {
+          Button("Check for Updates") {
+            Task { await checkForUpdates() }
+          }
+          .disabled(updateStatus == .checking)
+        } label: {
+          Text("Updates")
+          if let message = updateMessage {
+            Text(message)
+          }
+        }
+        if case .available(_, let page) = updateStatus {
+          Link("Download from GitHub", destination: page)
+        }
       }
       Section("Timing") {
         Stepper(value: $globalOffset, in: -5...5, step: 0.1) {
@@ -113,5 +136,27 @@ struct SettingsView: View {
     }
     .formStyle(.grouped)
     .frame(width: 380)
+  }
+
+  private var updateMessage: String? {
+    switch updateStatus {
+    case .idle: nil
+    case .checking: "Checking…"
+    case .upToDate: "You're on the latest version."
+    case .available(let version, _): "Zul \(version) is available."
+    case .failed: "Couldn't check for updates."
+    }
+  }
+
+  private func checkForUpdates() async {
+    updateStatus = .checking
+    do {
+      let release = try await UpdateChecker.latestRelease()
+      let isNewer = UpdateChecker.isVersion(release.tagName, newerThan: Bundle.main.shortVersion)
+      let version = String(release.tagName.trimmingPrefix("v"))
+      updateStatus = isNewer ? .available(version: version, page: release.htmlUrl) : .upToDate
+    } catch {
+      updateStatus = .failed
+    }
   }
 }
