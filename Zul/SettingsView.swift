@@ -127,11 +127,14 @@ struct SettingsView: View {
         Text("Overlay")
       } footer: {
         // In the last section's footer so it sits at the end of the scroll, not pinned.
-        Text("Zul \(Bundle.main.shortVersion)")
-          .font(.footnote)
-          .foregroundStyle(.secondary)
-          .frame(maxWidth: .infinity)
-          .padding(.top, 8)
+        Link(destination: Repository.url) {
+          Text("Zul \(Bundle.main.shortVersion)")
+            .underline()
+        }
+        .font(.footnote)
+        .foregroundStyle(.secondary)
+        .frame(maxWidth: .infinity)
+        .padding(.top, 8)
       }
     }
     .formStyle(.grouped)

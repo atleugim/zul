@@ -22,7 +22,7 @@ enum LRCLIBError: Error, Equatable {
 
 struct LyricsService {
   // LRCLIB requires clients to identify themselves.
-  private static let userAgent = "Zul v\(Bundle.main.shortVersion) (https://github.com/atleugim/zul)"
+  private static let userAgent = "Zul v\(Bundle.main.shortVersion) (\(Repository.url.absoluteString))"
 
   let cache: LyricsCache
   // Swappable so tests can exercise the get → search fallback and caching without the network.

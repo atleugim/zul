@@ -7,8 +7,7 @@ struct Release: Decodable, Equatable {
 
 enum UpdateChecker {
   static func latestRelease() async throws -> Release {
-    let url = URL(string: "https://api.github.com/repos/atleugim/zul/releases/latest")!
-    let (data, _) = try await URLSession.shared.data(from: url)
+    let (data, _) = try await URLSession.shared.data(from: Repository.latestReleaseAPI)
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
     return try decoder.decode(Release.self, from: data)
