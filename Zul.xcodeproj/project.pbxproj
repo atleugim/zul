@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 110;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AD5E00000000000000000003 /* MediaRemoteAdapter.framework in Embed MediaRemote Adapter */ = {isa = PBXBuildFile; fileRef = AD5E00000000000000000001 /* MediaRemoteAdapter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AD5E00000000000000000004 /* mediaremote-adapter.pl in Resources */ = {isa = PBXBuildFile; fileRef = AD5E00000000000000000002 /* mediaremote-adapter.pl */; };
+		AD5E00000000000000000008 /* THIRD-PARTY-NOTICES in Resources */ = {isa = PBXBuildFile; fileRef = AD5E00000000000000000007 /* THIRD-PARTY-NOTICES */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6314B1E0306D8EA1008C79A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6314B1CA306D8E9F008C79A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6314B1D1306D8E9F008C79A9;
+			remoteInfo = Zul;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AD5E00000000000000000006 /* Embed MediaRemote Adapter */ = {
+			isa = PBXCopyFilesBuildPhase;
+			dstPath = "";
+			dstSubfolder = Frameworks;
+			files = (
+				AD5E00000000000000000003 /* MediaRemoteAdapter.framework in Embed MediaRemote Adapter */,
+			);
+			name = "Embed MediaRemote Adapter";
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6314B1D2306D8E9F008C79A9 /* Zul.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zul.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6314B1DF306D8EA1008C79A9 /* ZulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZulTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD5E00000000000000000001 /* MediaRemoteAdapter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaRemoteAdapter.framework; path = build/MediaRemoteAdapter.framework; sourceTree = "<group>"; };
+		AD5E00000000000000000002 /* mediaremote-adapter.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; name = "mediaremote-adapter.pl"; path = "mediaremote-adapter/bin/mediaremote-adapter.pl"; sourceTree = "<group>"; };
+		AD5E00000000000000000007 /* THIRD-PARTY-NOTICES */ = {isa = PBXFileReference; lastKnownFileType = text; path = "THIRD-PARTY-NOTICES"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		6314B1D4306D8E9F008C79A9 /* Zul */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Zul;
+			sourceTree = "<group>";
+		};
+		6314B1E2306D8EA1008C79A9 /* ZulTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ZulTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6314B1CF306D8E9F008C79A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+		6314B1DC306D8EA1008C79A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			files = (
+			);
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6314B1C9306D8E9F008C79A9 = {
+			isa = PBXGroup;
+			children = (
+				6314B1D4306D8E9F008C79A9 /* Zul */,
+				6314B1E2306D8EA1008C79A9 /* ZulTests */,
+				AD5E00000000000000000005 /* Vendor */,
+				AD5E00000000000000000007 /* THIRD-PARTY-NOTICES */,
+				6314B1D3306D8E9F008C79A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6314B1D3306D8E9F008C79A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6314B1D2306D8E9F008C79A9 /* Zul.app */,
+				6314B1DF306D8EA1008C79A9 /* ZulTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD5E00000000000000000005 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				AD5E00000000000000000001 /* MediaRemoteAdapter.framework */,
+				AD5E00000000000000000002 /* mediaremote-adapter.pl */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6314B1D1306D8E9F008C79A9 /* Zul */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6314B1F1306D8EA1008C79A9 /* Build configuration list for PBXNativeTarget "Zul" */;
+			buildPhases = (
+				6314B1CE306D8E9F008C79A9 /* Sources */,
+				6314B1CF306D8E9F008C79A9 /* Frameworks */,
+				6314B1D0306D8E9F008C79A9 /* Resources */,
+				AD5E00000000000000000006 /* Embed MediaRemote Adapter */,
+			);
+			buildRules = (
+			);
+			fileSystemSynchronizedGroups = (
+				6314B1D4306D8E9F008C79A9 /* Zul */,
+			);
+			name = Zul;
+			productName = Zul;
+			productReference = 6314B1D2306D8E9F008C79A9 /* Zul.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6314B1DE306D8EA1008C79A9 /* ZulTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6314B1F4306D8EA1008C79A9 /* Build configuration list for PBXNativeTarget "ZulTests" */;
+			buildPhases = (
+				6314B1DB306D8EA1008C79A9 /* Sources */,
+				6314B1DC306D8EA1008C79A9 /* Frameworks */,
+				6314B1DD306D8EA1008C79A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6314B1E1306D8EA1008C79A9 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				6314B1E2306D8EA1008C79A9 /* ZulTests */,
+			);
+			name = ZulTests;
+			productName = ZulTests;
+			productReference = 6314B1DF306D8EA1008C79A9 /* ZulTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6314B1CA306D8E9F008C79A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					6314B1D1306D8E9F008C79A9 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+					6314B1DE306D8EA1008C79A9 = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 6314B1D1306D8E9F008C79A9;
+					};
+				};
+			};
+			buildConfigurationList = 6314B1CD306D8E9F008C79A9 /* Build configuration list for PBXProject "Zul" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6314B1C9306D8E9F008C79A9;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 6314B1D3306D8E9F008C79A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6314B1D1306D8E9F008C79A9 /* Zul */,
+				6314B1DE306D8EA1008C79A9 /* ZulTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6314B1D0306D8E9F008C79A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+				AD5E00000000000000000004 /* mediaremote-adapter.pl in Resources */,
+				AD5E00000000000000000008 /* THIRD-PARTY-NOTICES in Resources */,
+			);
+		};
+		6314B1DD306D8EA1008C79A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6314B1CE306D8E9F008C79A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+		6314B1DB306D8EA1008C79A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6314B1E1306D8EA1008C79A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6314B1D1306D8E9F008C79A9 /* Zul */;
+			targetProxy = 6314B1E0306D8EA1008C79A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6314B1EF306D8EA1008C79A9 /* Debug configuration for PBXProject "Zul" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6314B1F0306D8EA1008C79A9 /* Release configuration for PBXProject "Zul" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		6314B1F2306D8EA1008C79A9 /* Debug configuration for PBXNativeTarget "Zul" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Zul;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.atleugim.zul;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6314B1F3306D8EA1008C79A9 /* Release configuration for PBXNativeTarget "Zul" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Zul;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.atleugim.zul;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6314B1F5306D8EA1008C79A9 /* Debug configuration for PBXNativeTarget "ZulTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.atleugim.zul.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zul.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Zul";
+			};
+			name = Debug;
+		};
+		6314B1F6306D8EA1008C79A9 /* Release configuration for PBXNativeTarget "ZulTests" */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.atleugim.zul.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Zul.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Zul";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6314B1CD306D8E9F008C79A9 /* Build configuration list for PBXProject "Zul" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6314B1EF306D8EA1008C79A9 /* Debug configuration for PBXProject "Zul" */,
+				6314B1F0306D8EA1008C79A9 /* Release configuration for PBXProject "Zul" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		6314B1F1306D8EA1008C79A9 /* Build configuration list for PBXNativeTarget "Zul" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6314B1F2306D8EA1008C79A9 /* Debug configuration for PBXNativeTarget "Zul" */,
+				6314B1F3306D8EA1008C79A9 /* Release configuration for PBXNativeTarget "Zul" */,
+			);
+			defaultConfigurationName = Release;
+		};
+		6314B1F4306D8EA1008C79A9 /* Build configuration list for PBXNativeTarget "ZulTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6314B1F5306D8EA1008C79A9 /* Debug configuration for PBXNativeTarget "ZulTests" */,
+				6314B1F6306D8EA1008C79A9 /* Release configuration for PBXNativeTarget "ZulTests" */,
+			);
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6314B1CA306D8E9F008C79A9 /* Project object */;
+	validationLevel = 1;
+}

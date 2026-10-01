@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Make the project readable by Xcode 26
+        run: sed -i '' 's/objectVersion = 110;/objectVersion = 77;/' Zul.xcodeproj/project.pbxproj
+
+      - name: Check the tag matches the app version
+        run: |
+          version=$(grep -m1 "MARKETING_VERSION" Zul.xcodeproj/project.pbxproj | sed -E 's/.*= "?([^";]+)"?;/\1/')
+          if [[ -z "$version" || "v$version" != "$GITHUB_REF_NAME" ]]; then
+            echo "::error::Tag $GITHUB_REF_NAME doesn't match the app version $version"
+            exit 1
+          fi
+
+      - name: Test
+        run: |
+          ./scripts/build-adapter.sh
+          xcodebuild -quiet -project Zul.xcodeproj -scheme Zul -destination "platform=macOS" test
+
+      - name: Build DMG
+        run: ./scripts/build-dmg.sh
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" build/Zul-*.dmg --title "Zul $GITHUB_REF_NAME" --generate-notes
