@@ -36,3 +36,16 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh release create "$GITHUB_REF_NAME" build/Zul-*.dmg --title "Zul $GITHUB_REF_NAME" --generate-notes
+
+      - name: Update the Homebrew cask
+        env:
+          TAP_TOKEN: ${{ secrets.TAP_TOKEN }}
+        run: |
+          version=${GITHUB_REF_NAME#v}
+          sha256=$(shasum -a 256 "build/Zul-$version.dmg" | cut -d " " -f 1)
+          git clone --depth 1 "https://x-access-token:$TAP_TOKEN@github.com/atleugim/homebrew-tap.git" tap
+          cd tap
+          sed -i '' -e "s/^  version \".*\"/  version \"$version\"/" -e "s/^  sha256 \".*\"/  sha256 \"$sha256\"/" Casks/zul.rb
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -am "chore: update zul to $version"
+          git push
