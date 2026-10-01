@@ -4,6 +4,10 @@ A macOS menu bar app that shows synced lyrics for whatever is playing, in a floa
 
 Zul reads the system's Now Playing info, so it works with any player that reports to it (Apple Music, Spotify, browsers, etc.), and fetches time-synced lyrics from [LRCLIB](https://lrclib.net).
 
+
+https://github.com/user-attachments/assets/d4afc49e-6457-4f11-b72c-e8ae307c2c12
+
+
 ## Features
 
 - Floating, click-through overlay that shows the current line in sync with playback.
