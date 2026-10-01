@@ -18,6 +18,26 @@ Zul reads the system's Now Playing info, so it works with any player that report
 
 macOS 14 or later.
 
+## Installation
+
+1. Download `Zul-<version>.dmg` from the [latest release](https://github.com/atleugim/zul/releases/latest).
+2. Open it and drag **Zul** to **Applications**.
+3. Open Zul from Applications.
+
+Zul isn't notarized by Apple, so macOS blocks it the first time:
+
+1. When macOS says it can't verify Zul, click **Done**.
+2. Open **System Settings > Privacy & Security** and scroll down to **Security**.
+3. Next to the message saying Zul was blocked, click **Open Anyway** and confirm with your password.
+
+Or, from the Terminal, remove the quarantine flag macOS puts on downloaded apps:
+
+```sh
+xattr -dr com.apple.quarantine /Applications/Zul.app
+```
+
+You only need to do this once. Zul then opens normally, and it doesn't ask for any other permissions.
+
 ## Usage
 
 Zul lives in the menu bar (music note icon) and has no Dock icon.
@@ -58,6 +78,14 @@ scripts/build-dmg.sh
 ```
 
 Builds a universal Release `Zul.app` and writes `build/Zul-<version>.dmg`. It builds the adapter first if it's missing.
+
+### Formatting
+
+The code is formatted with `swift format` (bundled with Xcode), using the repo's `.swift-format`:
+
+```sh
+swift format -i -r Zul ZulTests
+```
 
 ### Tests
 
